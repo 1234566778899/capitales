@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ACME UX-UI">
+    <meta name="description" content="ACME STUDIO Landing Page - SS4A">
+    <meta name="keyword" content="ACME, STUDIO, Mobile apps, Web Development">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <title>Capitales</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark gris-claro">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-graduation-cap me-2"></i>Aprendiendo y Jugando</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Contacto: +51 932597220</a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <div class="card gris-claro border border-dark">
+            <div class="card-header border border-dark">
+                <h4 class="green text-center">¿Qué tanto sabes de las capitales del mundo?</h4>
+            </div>
+            <div class="text-center" id="inicio">
+                <div class="mb-2">
+                    <input type="text" id="nombre" class="input-nombre" placeholder="Escribe tu nombre">
+                </div>
+                <h5 class="mt-4">Elige el continente..</h5>
+                <div class="px-3">
+                    <button class="btn btn-outline-light mt-2 continente">América</button><br>
+                    <button class="btn btn-outline-light mt-2 continente">África</button><br>
+                    <button class="btn btn-outline-light mt-2 continente">Asia</button><br>
+                    <button class="btn btn-outline-light mt-2 continente">Europa</button><br>
+                    <button class="btn btn-outline-light mt-2 mb-4 continente">Oceania</button>
+                </div>
+                <p class="text-warning ayuda"><u>Son 10 preguntas, obten la mayor puntuación</u></p>
+            </div>
+
+            <div class="ocultar" id="preguntas">
+                <div class="card-body">
+                    <h3 class="text-center yellow mb-3" id="titulo">Capital de Perú..</h3>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div id="opcion1"
+                                class="col-md-6 border opcion d-flex justify-content-center align-items-center">Lima
+                            </div>
+                            <div id="opcion2"
+                                class="col-md-6 border opcion d-flex justify-content-center align-items-center">
+                                Buenos aires</div>
+                            <div id="opcion3"
+                                class="col-md-6 border opcion d-flex justify-content-center align-items-center">
+                                Bogota</div>
+                            <div id="opcion4"
+                                class="col-md-6 border opcion d-flex justify-content-center align-items-center">
+                                Caracas</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <button class="btn btn-outline-light" id="btn-rindo">!Me rindo!</button>
+                </div>
+            </div>
+            <div class="ocultar" id="resultados">
+                <di class="container">
+                    <div class="row">
+                        <div class="col-md-6 text-center px-5">
+                            <h4>RESULTADO</h4>
+                            <h5 id="correctas" class="rounded-pill bg-success py-1">Correctas: 2</h5>
+                            <h5 id="incorrectas" class="rounded-pill bg-danger py-1">Incorrectas: 4</h5>
+                            <button id="btn-volver" class="btn btn-outline-warning mt-3 mb-4">Jugar de nuevo</button>
+                        </div>
+                        <div class="col-md-6 px-4">
+                            <p class="text-center fs-5"><u>Marcador
+                                    <select id="combo-continente" class="ms-3">
+                                        <option value="Europa">Europa</option>
+                                        <option value="Asia">Asia</option>
+                                        <option value="América">América</option>
+                                        <option value="África">Africa</option>
+                                        <option value="Oceania">Oceania</option>
+                                    </select> </u></p>
+                            <div class="tabla">
+                                <table class="table text-center text-white">
+                                    <tbody class="lista">
+                                        <tr>
+                                            <td>Puesto</td>
+                                            <td>Nombre</td>
+                                            <td>Continente</td>
+                                            <td>Puntuación</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </di>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery.js"></script>
+
+    <script src="./js/confi.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"
+        integrity="sha512-yFjZbTYRCJodnuyGlsKamNE/LlEaEAxSUDe5+u61mV8zzqJVFOH7TnULE2/PP/l5vKWpUNnF4VGVkXh3MjgLsg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

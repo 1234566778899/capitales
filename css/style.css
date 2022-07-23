@@ -1,0 +1,71 @@
+body {
+    font-family: 'Archivo Narrow', sans-serif;
+    background-color: rgb(28, 27, 41);
+    color: white;
+}
+
+.green {
+    color: rgb(41, 204, 122);
+}
+
+.yellow {
+    color: rgb(253, 209, 113)
+}
+
+.gris-claro {
+    background-color: rgb(41, 40, 65);
+}
+
+.gris-oscuro {
+    color: rgb(28, 27, 41);
+}
+
+.opcion {
+    height: 90px;
+    cursor: pointer;
+}
+
+.opcion:hover {
+    background-color: rgb(28, 27, 41);
+}
+
+.ocultar {
+    display: none;
+}
+
+.input-nombre {
+    outline: none;
+    padding: 5px;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+}
+.continente{
+    width: 25%;
+}
+.ayuda{
+    font-size: 14px;
+}
+@media screen and (max-width: 765px) {
+    .continente {
+        width: 100%;
+    }
+}
+
+.tabla{
+    height: 210px;
+    overflow-y: auto;
+}
+.tabla::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.tabla::-webkit-scrollbar:vertical {
+    width:5px;
+}
+
+.tabla::-webkit-scrollbar-thumb {
+    background-color: #797979;
+}
